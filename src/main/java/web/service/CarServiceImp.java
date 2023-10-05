@@ -12,7 +12,6 @@ import java.util.List;
 public class CarServiceImp implements CarService {
     @Autowired
     private CarDAO carDAO;
-    @Transactional(readOnly = true)
     @Override
     public List<Car> listCars(Integer count) {
         return carDAO.listCars(count);
